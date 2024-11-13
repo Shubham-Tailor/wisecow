@@ -1,9 +1,9 @@
-  apiVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: wisecow-deployment
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: wisecow
@@ -13,7 +13,7 @@ spec:
         app: wisecow
     spec:
       containers:
-      - name: wisecow
-        image: <container-registry>/wisecow:latest
-        ports:
-        - containerPort: 4499
+        - name: wisecow
+          image: gcr.io/wisecow-project/wisecow # Update with your image location
+          ports:
+            - containerPort: 4499
