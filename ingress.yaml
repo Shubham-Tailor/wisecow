@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: wisecow-ingress
+  annotations:
+    networking.gke.io/managed-certificates: "wisecow-cert"
+spec:
+  ingressClassName: "gce"
+  rules:
+  - host: "35.200.198.141.nip.io"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: wisecow-service
+            port:
+              number: 4499
+  tls:
+  - hosts:
+    - "35.200.198.141.nip.io"
+    secretName: wisecow-tls

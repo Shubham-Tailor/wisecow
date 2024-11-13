@@ -1,0 +1,7 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: wisecow-cert
+spec:
+  domains:
+    - 35.200.198.141.nip.io 
