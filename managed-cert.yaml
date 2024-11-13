@@ -4,4 +4,4 @@ metadata:
   name: wisecow-cert
 spec:
   domains:
-    - 35.200.198.141.nip.io 
+    - "35.200.198.141.nip.io"
