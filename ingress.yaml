@@ -20,4 +20,3 @@ spec:
   tls:
   - hosts:
     - "35.200.198.141.nip.io"
-    secretName: wisecow-tls
